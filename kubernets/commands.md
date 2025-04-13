@@ -6,18 +6,20 @@
                                         POD
 
 
-1) Как эскпортировать кубконфиг файл в Кубернетесе?  ```export KUBECONFIG=/home/farrukh/config.yaml```
-2) Как посмотреть список контекстов к Кубернетесе?  ```kubectl config get-contexts```
-3) Как посмотреть список node в Кубернетесе? ```kubectl get nodes```
-4) Как посмотреть список namespace в Кубернетесе? ```kubectl get namespaces```
-5) Как создать свой namespace? ```kubectl create namespace f-sadatov```
-6) Как посмотреть весь список pod-ов в виде json? ```kubectl get pods -o json```
-7) Как посмотреть список pod-ов в расширенном формате? ```kubectl get pods -o wide```
-8) Как посмотреть статус pod-ов в онлайн режиме? ```kubectl get pods --watch```
-9) Как создать pod в Кубернетес под своим namespace nginx-sadatov?  ```kubectl run nginx-sadatov --image nginx:latest --port 80 -n f-sadatov```
-10) Как сгенирировать манифест файл для pod-a и записать конфиг файл pod-а в yaml файл? ```kubectl run nginx-sadatov --image nginx:latest --port 80 --dry-run=client -o yaml -n f-sadatov > nginx-sadatov.yaml```
-11) Как запустить pod из сгенирированного манифест файла? ```kubectl apply -f nginx-sadatov.yaml```
-
+1) Config yaml fayilni kubernetsga expose qilish?  ```export KUBECONFIG=/home/fayoz/config.yaml```
+2) Kontekstlar ro'yxatini ko'rsatish?  ```kubectl config get-contexts```
+3) Kubernetsda nodelar ruyxatini kurish? ```kubectl get nodes```
+4) Kubernetsda namespacelar ruyxatini kurish? ```kubectl get namespaces```
+5) O'zimning namespace imni yaratish ? ```kubectl create namespace f-absoatov```
+6) Barcha podlarni json formatda kurish? ```kubectl get pods -o json```
+7) Pod larni kengaytirilgan formadda kurish? ```kubectl get pods -o wide```
+8) Pod larning holatini online holatini kurish ? ```kubectl get pods --watch```
+9) Pod yaratish malum bir image yordamida uzimni ns imda nginx-fayoz?  ```kubectl run nginx-fayoz --image nginx:latest --port 80 -n f-absoatov```
+10) Pod uchun manifest fayil generatsiya qilish ? ```kubectl run nginx-fayoz --image nginx:latest --port 80 --dry-run=client -o yaml -n f-absoatov > nginx-absoatov.yaml```
+11) Pod ni generatsiya qilingan fayl orqali ishga tushirish? ```kubectl apply -f nginx-absoatov.yaml```
+12) Pod ning loglarini kurish ? ``` kubectl logs my-pod ```
+13) Localniy portni poni portiga yunaltirish ? ``` kubectl port-forward my-pod 8080:80 ```
+14) Pod ni detallari bilan kursatish ? ``` kubectl describe pod <pod-name>```
 
                                      Deployment
 1) Как запустить deployment под своим namespace-ом?  ```kubectl create deploy tic-tac-toe --image m2yy5eu3z/tic-tac-toe:arm64 --replicas 1 --port 3000 -n f-sadatov```
