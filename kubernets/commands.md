@@ -28,12 +28,12 @@
 4) Pod lar ruyxatini kurish? ```kubectl get pods -n f-absoatov```
 5) Replica larning sonini scale orqali kupaytirish? ```kubectl scale deploy tic-tac-toe --replicas 5 -n f-absoatov```
 6) Deployment yaml faylni generatsiya qilish va yaml fayilga yozib quyish? ```kubectl create deploy tic-tac-toe --image m2yy5eu3z/tic-tac-toe:arm64 --replicas 1 --port 3000 -n f-absoatov --dry-run=client -o yaml > tic-tac-toe-deployment.yaml```
-8) Как опубликовать deployment через Service? ```kubectl expose deployment flask-app --port 80 --target-port 5000 -n f-sadatov```
-9) Как посмотреть список Service? ```kubectl get service -n f-sadatov```
-10) Как зайти внутрь pod-a ? ```kubectl -n f-sadatov exec -it nginx -- bash```
-11) Как опубликовать deployment через NodePort? ```kubectl expose deployment nginx-arm --port 80 --target-port 80 --type NodePort -n f-sadatov```
+8) Как опубликовать deployment через Service? ```kubectl expose deployment flask-app --port 80 --target-port 5000 -n f-absoatov```
+9) Service lar ruyxatini kurish? ```kubectl get service -n f-absoatov```
+10) Pod ichiga kirish  ? ```kubectl -n f-absoatv exec -it nginx -- bash```
+11) Как опубликовать deployment через NodePort? ```kubectl expose deployment nginx-arm --port 80 --target-port 80 --type NodePort -n f-absoatov```
 13) Как изменить deployment файл напрямую из CLI? ```kubectl edit deployment/nginx-deploy```
-14) Как обновить версию nginx через императивным способом? ```kubectl set image deployment/my-deployment my-container=nginx:1.19.2```
+14) Obnavit qilish nginx imperativniy usulda ? ```kubectl set image deployment/my-deployment my-container=nginx:1.19.2```
 
                                     Ingress
 1) Как создать ingress? ```kubectl create ingress flaskapp-clusterip-ingress --rule="f-sadatov.sts404.uz/*=cluster-ip-service:80" --class nginx -n f-sadatov --dry-run=client -o yaml > ingress.yaml```
