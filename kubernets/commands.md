@@ -36,12 +36,12 @@
 14) Obnavit qilish nginx imperativniy usulda ? ```kubectl set image deployment/my-deployment my-container=nginx:1.19.2```
 Imperativ yangilash — bu siz tizimga “ana shuni bajar” deb aniq ko'rsatma berasiz.
 ``` kubectl set image deployment/my-app my-app=nginx:1.19 ```
-Deklarativ yangilash — bu siz “mana bunday holatga yet” deb aytasiz, tizim o'zi qanday bajarishni aniqlaydi.
+15) Deklarativ yangilash — bu siz “mana bunday holatga yet” deb aytasiz, tizim o'zi qanday bajarishni aniqlaydi.
 ``` kubectl apply -f deployment.yaml ```
 
                                     Ingress
-1) Как создать ingress? ```kubectl create ingress flaskapp-clusterip-ingress --rule="f-sadatov.sts404.uz/*=cluster-ip-service:80" --class nginx -n f-sadatov --dry-run=client -o yaml > ingress.yaml```
-   Не забудь добавить добавить в поле spec следующий запись:   ingressClassName: nginx
+1) Ingress yaratish va yaml fayl ga yozish ? ```kubectl create ingress flaskapp-clusterip-ingress --rule="f-absoatov.sts404.uz/*=cluster-ip-service:80" --class nginx -n f-absoatov --dry-run=client -o yaml > ingress.yaml```
+   Unutmang spec polyasiga qushish kerak quyidagini :   ingressClassName: nginx
 
                                      Check
 1) Для проверки какого то запроса какой образ использовать ? ```kubectl run check-pod --image nicolaka/netshoot -n exam-farrukh -- sleep infinity```
