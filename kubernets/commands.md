@@ -44,4 +44,4 @@ Imperativ yangilash — bu siz tizimga “ana shuni bajar” deb aniq ko'rsatma 
    Unutmang spec polyasiga qushish kerak quyidagini :   ingressClassName: nginx
 
                                      Check
-1) Для проверки какого то запроса какой образ использовать ? ```kubectl run check-pod --image nicolaka/netshoot -n exam-farrukh -- sleep infinity```
+1) Для проверки какого то запроса какой образ использовать ? ```kubectl run check-pod --image nicolaka/netshoot -n fayoz-final -- sleep infinity```
