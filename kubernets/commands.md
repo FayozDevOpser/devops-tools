@@ -22,13 +22,12 @@
 14) Pod ni detallari bilan kursatish ? ``` kubectl describe pod <pod-name>```
 
                                      Deployment
-1) Как запустить deployment под своим namespace-ом?  ```kubectl create deploy tic-tac-toe --image m2yy5eu3z/tic-tac-toe:arm64 --replicas 1 --port 3000 -n f-sadatov```
-2) Как посмотреть список deployment? ```kubectl get deployment -n f-sadatov```
-3) Как посмотреть список replicaset? ```kubectl get replicaset -n f-sadatov```
-4) Как посмотреть список pod-ов? ```kubectl get pods -n f-sadatov```
-5) Как увеличить количество реплик deployment? ```kubectl scale deploy tic-tac-toe --replicas 5 -n f-sadatov```
-6) Как сгенирировать deployment файл и записать в yaml файл? ```kubectl create deploy tic-tac-toe --image m2yy5eu3z/tic-tac-toe:arm64 --replicas 1 --port 3000 -n f-sadatov --dry-run=client -o yaml > tic-tac-toe-deployment.yaml```
-7) Как посмотреть статус pod-a? ```kubectl describe pod tic-tac-toe-7474ff488c-bsqzz -n f-sadatov```
+1) Deploymentni ishga tushirish uzimning namespace imda arm64 archtictureda?  ```kubectl create deploy tic-tac-toe --image m2yy5eu3z/tic-tac-toe:arm64 --replicas 1 --port 3000 -n f-absoatov```
+2) Deploymentlar ruyxatini kurish? ```kubectl get deployment -n f-absoatov```
+3) Replicasetlar ruyxatini kurish? ```kubectl get replicaset -n f-sadatov```
+4) Pod lar ruyxatini kurish? ```kubectl get pods -n f-absoatov```
+5) Replica larning sonini scale orqali kupaytirish? ```kubectl scale deploy tic-tac-toe --replicas 5 -n f-absoatov```
+6) Deployment yaml faylni generatsiya qilish va yaml fayilga yozib quyish? ```kubectl create deploy tic-tac-toe --image m2yy5eu3z/tic-tac-toe:arm64 --replicas 1 --port 3000 -n f-absoatov --dry-run=client -o yaml > tic-tac-toe-deployment.yaml```
 8) Как опубликовать deployment через Service? ```kubectl expose deployment flask-app --port 80 --target-port 5000 -n f-sadatov```
 9) Как посмотреть список Service? ```kubectl get service -n f-sadatov```
 10) Как зайти внутрь pod-a ? ```kubectl -n f-sadatov exec -it nginx -- bash```
