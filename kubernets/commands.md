@@ -1,6 +1,6 @@
 
-1) Docker obrazni arm64 qlib kutarish? ```docker buildx create --use && docker buildx build --platform linux/arm64 -t flask-app:v1 --load .```
-2) Docker obrazni Docker Hub ga yuborish? ```docker login -u fayozdevops && docker tag todo:v2 fayozdevops/todo:v2 && docker push fayozdevops/todo:v2```
+1) Docker obrazni Kubernetsda arm64 qlib kutarish? ```docker buildx create --use && docker buildx build --platform linux/arm64 -t flask-app:v1 --load .```
+2) Docker obrazni Docker Hub ga yuborish? ```docker login -u fayozdevopser && docker tag todo:v2 fayozdevops/todo:v2 && docker push fayozdevopser/todo:v2```
                                         
                                         
                                         POD
