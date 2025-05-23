@@ -6,10 +6,10 @@
 5) nmcli general hostname postgresql
 6) systemctl restart NetworkManager
 
-# Настройте репозиторий Postgresql 15
-yum module list
-yum module enable postgresql -y
-yum install postgresql-server"
+# Настройте репозиторий Postgresql 15 (OS ning uzidagi versiyani enable qilish)
+1 yum module list
+2 yum module enable postgresql -y
+3 yum install postgresql-server
 
 # Ннициализируете кластер базы данных
 postgresql-setup --initdb
