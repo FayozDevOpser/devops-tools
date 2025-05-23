@@ -1,6 +1,6 @@
 # Настройка статического IP-адреса 
 1) ''' nmcli connection modify ens160 ipv4.addresses 10.0.10.10/24 '''
-nmcli connection modify ens160 ipv4.gateway 10.0.10.2
+2) ''' nmcli connection modify ens160 ipv4.gateway 10.0.10.2 '''
 nmcli connection modify ens160 ipv4.dns 10.0.10.2
 nmcli connection modify ens160 ipv4.method manual
 nmcli general hostname postgresql
