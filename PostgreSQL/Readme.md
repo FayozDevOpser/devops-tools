@@ -38,10 +38,10 @@ zabbixdb=# create table table01 (col01 int, col02 varchar(20));
 # Команда \dt используется в оболочке psql для вывода списка всех таблиц в текущей базе данных. Если вы выполните эту команду после создания таблицы table01, то она должна показать эту таблицу в списке.
 zabbixdb=# \dt
 # insert into table01 values (1, 'RedHat'), (2, 'Debian'); в оболочке psql, чтобы вставить данные в таблицу ""table01"" в базе данных ""zabbixdb"".
-1)Эта команда вставляет две строки данных в таблицу ""table01"":
-2)Значение 1 для столбца ""col01"" и строка ""RedHat"" для столбца ""col02"".
-3)Значение 2 для столбца ""col01"" и строка ""Debian"" для столбца ""col02"".
-4)zabbixdb=# insert into table01 values (1, 'RedHat'), (2, 'Debian');
+1) Эта команда вставляет две строки данных в таблицу ""table01"":
+2) Значение 1 для столбца ""col01"" и строка ""RedHat"" для столбца ""col02"".
+3) Значение 2 для столбца ""col01"" и строка ""Debian"" для столбца ""col02"".
+4) zabbixdb=# insert into table01 values (1, 'RedHat'), (2, 'Debian');
 # select * from table01 в оболочке psql будет выведено содержимое таблицы ""table01"" из базы данных ""zabbixdb"". 
 zabbixdb=# select * from table01;
 
