@@ -20,7 +20,7 @@
 2) pwd
 3) /var/lib/pgsql
 4) cat /etc/passwd | grep postgres
-5) relust from 4) '''postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash'''
+5) postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash
 
 # Команда \? используется в оболочке psql для вывода справочной информации о доступных командах и их использовании. 
 postgres=# \?
@@ -38,18 +38,18 @@ zabbixdb=# create table table01 (col01 int, col02 varchar(20));
 # Команда \dt используется в оболочке psql для вывода списка всех таблиц в текущей базе данных. Если вы выполните эту команду после создания таблицы table01, то она должна показать эту таблицу в списке.
 zabbixdb=# \dt
 # insert into table01 values (1, 'RedHat'), (2, 'Debian'); в оболочке psql, чтобы вставить данные в таблицу ""table01"" в базе данных ""zabbixdb"".
-Эта команда вставляет две строки данных в таблицу ""table01"":
-Значение 1 для столбца ""col01"" и строка ""RedHat"" для столбца ""col02"".
-Значение 2 для столбца ""col01"" и строка ""Debian"" для столбца ""col02"".
-zabbixdb=# insert into table01 values (1, 'RedHat'), (2, 'Debian');
+1)Эта команда вставляет две строки данных в таблицу ""table01"":
+2)Значение 1 для столбца ""col01"" и строка ""RedHat"" для столбца ""col02"".
+3)Значение 2 для столбца ""col01"" и строка ""Debian"" для столбца ""col02"".
+4)zabbixdb=# insert into table01 values (1, 'RedHat'), (2, 'Debian');
 # select * from table01 в оболочке psql будет выведено содержимое таблицы ""table01"" из базы данных ""zabbixdb"". 
-zabbixdb=# select * from table01;"
+zabbixdb=# select * from table01;
 
 ss -tnlup
 
 # изменяем параметр listen_addresses на 10.0.10.10. Это означает, что сервер PostgreSQL будет слушать только соединения на указанном IP-адресе 10.0.10.10.
 nano /var/lib/pgsql/data/postgresql.conf
-listen_addresses = '10.0.10.10'"
+listen_addresses = '10.0.10.10'
 
 systemctl restart postgresql.service
 
