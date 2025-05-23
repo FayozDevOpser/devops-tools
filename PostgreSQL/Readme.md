@@ -1,4 +1,4 @@
-# Настройка статического IP-адреса 
+### Настройка статического IP-адреса 
 1) nmcli connection modify ens160 ipv4.addresses 10.0.10.10/24 
 2) nmcli connection modify ens160 ipv4.gateway 10.0.10.2 
 3) nmcli connection modify ens160 ipv4.dns 10.0.10.2
