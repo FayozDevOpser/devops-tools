@@ -7,20 +7,20 @@
 6) systemctl restart NetworkManager
 
 # Настройте репозиторий Postgresql 15 (OS ning uzidagi versiyani enable qilish)
-1 yum module list
-2 yum module enable postgresql -y
-3 yum install postgresql-server
+1) yum module list
+2) yum module enable postgresql -y
+3) yum install postgresql-server
 
 # Ннициализируете кластер базы данных
-postgresql-setup --initdb
-systemctl enable --now postgresql"
+1) postgresql-setup --initdb
+2) systemctl enable --now postgresql
 
 # Переключаетесь на пользователя postgres
-su - postgres
-pwd
-/var/lib/pgsql
-cat /etc/passwd | grep postgres
-postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash"
+1)su - postgres
+  pwd
+  /var/lib/pgsql
+  cat /etc/passwd | grep postgres
+  postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash"
 
 # Команда \? используется в оболочке psql для вывода справочной информации о доступных командах и их использовании. 
 postgres=# \?
