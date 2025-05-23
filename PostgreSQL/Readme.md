@@ -16,11 +16,11 @@
 2) systemctl enable --now postgresql
 
 # Переключаетесь на пользователя postgres
-1)su - postgres
-  pwd
-  /var/lib/pgsql
-  cat /etc/passwd | grep postgres
-  postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash"
+1) su - postgres
+2) pwd
+3) /var/lib/pgsql
+4) cat /etc/passwd | grep postgres
+5) relust from 4) '''postgres:x:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash'''
 
 # Команда \? используется в оболочке psql для вывода справочной информации о доступных командах и их использовании. 
 postgres=# \?
