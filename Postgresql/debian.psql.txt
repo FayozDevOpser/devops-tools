@@ -48,3 +48,9 @@ network:
 # Установите последнюю версию PostgreSQL:
 # Если вам нужна конкретная версия, используйте «postgresql-15» или аналогичную вместо «postgresql»
     sudo apt install postgresql-15 postgresql-client-15 -y
+# Статус сервера:
+    sudo systemctl status postgresql
+## Переключаетесь на пользователя postgres:
+    1) su - postgres
+    2) pwd
+    3) cat /etc/passwd | grep postgres
