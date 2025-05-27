@@ -14,3 +14,22 @@ deb http://archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe m
 
 deb http://archive.canonical.com/ubuntu/ jammy partner
 # deb-src http://archive.canonical.com/ubuntu/ jammy partner
+
+
+###установить статический IP-адрес на Ubuntu Server 22.04, вам необходимо настроить его через netplan 
+2)cat /etc/netplan/00-installer-config.yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      addresses:
+        - 192.168.42.130/24
+      routes:
+        - to: default
+          via: 192.168.42.130
+      nameservers:
+          addresses: [1.1.1.1, 8.8.8.8, 4.4.4.4]
+
+###Примените конфигурацию, выполнив команду (ВНИМАНИЕ: это приведет к разрыву всех активных SSH-подключений):
+1) sudo netplan apply
