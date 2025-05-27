@@ -54,3 +54,24 @@ network:
     1) su - postgres
     2) pwd
     3) cat /etc/passwd | grep postgres
+### Команда create database named fayozdb. Войдите в систему пользователя postgres и в интерфейс SQL:
+1) postgres=# create database fayozdb;
+2) postgres=#l
+### изменяем параметр listen_addresses на 192.168.42.130. Это означает, что сервер PostgreSQL будет слушать только соединения на указанном IP-адресе 192.168.42.130
+1) nano /etc/postgresql/15/main/postgresql.conf
+2) listen_addresses = '192.168.42.130'
+3) systemctl restart postgresql.service
+4) ss -tnlup
+### в файле "pg_hba.conf" задает правило доступа для подключений к серверу PostgreSQL.
+nano /etc/postgresql/15/main/pg_hba.conf
+# IPv4 local connections:
+host    all             all             192.168.42.130/24       md5
+
+###Создайте пользователя с паролем:
+ create user Farrukh with password 'qwe!123';
+###Назначить пользователя владельцем базы данных (fayozdb):
+ 1)ALTER DATABASE fayozdb OWNER TO Farrukh;
+ 2)systemctl restart postgresql.service
+
+
+
