@@ -71,7 +71,28 @@ host    all             all             192.168.42.130/24       md5
  create user Farrukh with password 'qwe!123';
 ###Назначить пользователя владельцем базы данных (fayozdb):
  1)ALTER DATABASE fayozdb OWNER TO Farrukh;
- 2)systemctl restart postgresql.service
+###Чтобы автоматически выдавались права на будущие таблицы:
+1)alter default privileges in schema public grant all on table to Farrukh;
+2)systemctl restart postgresql.service
+
+#### EXAPLE:
+
+#Проверка баз данных:
+postgres=# \l
+#Подключение к базе:
+postgres=# \connect fayozdb
+# Создание таблицы:
+fayozdb=#  create table table01 (col01 int, col02 varchar(20));
+#Добавление данных в таблицу:
+fayozdb=# insert into table01 values (1, 'RedHat'), (2, 'Debian');
+#Просмотр таблиц:
+fayozdb=# \dt
+#все строки из таблицы table01:
+fayozdb=# select * from table01;
+
+
+
+
 
 
 
